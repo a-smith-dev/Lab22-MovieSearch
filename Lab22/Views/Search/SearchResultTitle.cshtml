@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model SearchResult
+
+<h1>Title Search Results</h1>
+<h4>Here's a list of movies containing "@Model.Term" in the title:</h4>
+
+<div>
+    <ul>
+        @foreach (var movie in Model.MovieList)
+        {
+            <li>@movie.Title</li>
+        }
+    </ul>
+</div>
